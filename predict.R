@@ -10,7 +10,7 @@ train_model <- function(data) {
     status ~ .,
     data = data,
     method = "knn",
-    trControl = trainControl(method = "cv", number = 5),
+    trControl = trainControl(method = "cv", number = 10),
     preProcess = c("center", "scale"),
     tuneGrid = expand.grid(k = seq(1, 31, by = 2))
   )
