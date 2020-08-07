@@ -7,7 +7,7 @@ export("clean")
 # remove salary, since we only now it, when a candidate got placed
 select_columns <- function(data) {
   cols <- names(data)
-  cols <- cols[!cols %in% "salary"]
+  cols <- cols[!cols %in% c("salary")]
   data[, cols, with=FALSE]
 }
 
